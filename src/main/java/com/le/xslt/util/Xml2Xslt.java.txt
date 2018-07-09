@@ -1,0 +1,287 @@
+package com.le.xslt.util;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
+import java.util.TreeMap;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.SchemaOutputResolver;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Result;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.wiztools.xsdgen.ParseException;
+import org.wiztools.xsdgen.XsdConfig;
+import org.wiztools.xsdgen.XsdGen;
+
+public class Xml2Xslt {
+	public static void main3(String[] args) throws IOException, ParseException {
+		String fname = "chatlog.xml";
+		File file = new File("E:\\workspace\\git\\mini-projects\\xml2xslt\\src\\main\\resources\\" + fname);
+		XsdConfig xc = new XsdConfig();
+		xc.setXsdPrefix("xsl");
+
+		XsdGen gen = new XsdGen(xc);
+		gen.parse(new File("E:\\workspace\\git\\mini-projects\\xml2xslt\\src\\main\\resources\\" + fname));
+		File out = new File("E:\\workspace\\git\\mini-projects\\xml2xslt\\src\\main\\resources\\" + fname+".txt");
+		gen.write(new FileOutputStream(out));
+	}
+	public static void main2(String[] args) throws JAXBException, IOException {
+        JAXBContext jc = JAXBContext.newInstance("");
+        jc.generateSchema(new SchemaOutputResolver() {
+            @Override
+            public Result createOutput(String namespaceUri, String suggestedFileName) throws IOException {
+                StreamResult result = new StreamResult(System.out);
+                result.setSystemId(suggestedFileName);
+                return result;
+            }
+
+        });
+	}
+	public static void main(String[] args) throws Exception {
+		String fname = "chatlog.xml";
+		File file = new File("E:\\workspace\\git\\mini-projects\\xml2xslt\\src\\main\\resources\\" + fname);
+		DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		Document doc = dBuilder.parse(file);
+		
+		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+		
+	    XPath xPath =  XPathFactory.newInstance().newXPath();
+//	    String expression = "//*[not(*)]";
+	    String expression = "//*[not(*)]";
+
+	    DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+	    DocumentBuilder builder = builderFactory.newDocumentBuilder();
+	    Document document = builder.parse(file);
+	    document.getDocumentElement().normalize();
+//
+	    NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(document, XPathConstants.NODESET);
+	    
+//	    NodeList nodeList = document.getChildNodes();
+	    
+	    List<String> paths = new ArrayList<>();
+	    Map<String,XmlNodeTag> upmap = new TreeMap<>();
+	    for(int i = 0 ; i < nodeList.getLength(); i++) {
+	    	XmlNodeTag xp = getXNode(nodeList.item(i));
+	    	upmap.put(xp.getTagPath(), xp);
+	    	if(!paths.contains(xp.getTagPath())) {
+	    		paths.add(xp.getTagPath());
+//	    		System.out.println(xp.getTagPath());
+	    	}
+	    }
+//	    for(String key:upmap.keySet()) {
+//	    	System.out.println(key);
+//	    }
+//
+//	    for(String key:upmap.keySet()) {
+//	    	XmlNodeTag xnp = upmap.get(key);
+//	    	System.out.println(xnp);
+//	    }
+//	    System.out.println("\n");
+//	    System.out.println(upmap.values());
+	    
+	    XmlNodeTag finalTag = unflat(upmap.values());
+//	    System.out.println(finalTag);
+	    String xslt = Pojo2XsltGenerator.getXslt(finalTag);
+	    System.out.println(xslt);
+	    
+/*	    
+	    System.out.println("\n");
+	    System.out.println("\n");
+	    System.out.println("\n");
+
+	    XmlNodeTag root = getChildNodes(doc);
+//	    System.out.println(getFlatUniquePaths(root));
+	    for(XmlNodeTag n:root.getChildren()) {
+	    	System.out.print("Root = "+n.getPath());
+	    	for(XmlNodeTag n1:n.getChildren()) {
+	    		System.out.println("\n");
+	    		System.out.print("\t"+n1.getPath());
+	    		for(XmlNodeTag n2:n1.getChildren()) {
+	    			System.out.print("\t"+n2.getPath());
+	    			for(XmlNodeTag n3:n2.getChildren()) {
+	    				System.out.println("\t"+n3.getPath());
+	    			}
+	    		}
+	    	}
+	    }*/
+	    
+		
+		
+/*		XmlNodeTag root = getChildNodes(doc);
+		System.out.println(getFlatUniquePaths(root));
+		
+		
+		NodeList nodeList = doc.getElementsByTagName("*");
+		Map<String,List<String>> uniquePaths = new TreeMap<>();
+	    for (int i = 0; i < nodeList.getLength(); i++) {
+	        Node node = nodeList.item(i);
+	        if (node.getNodeType() == Node.ELEMENT_NODE) {
+	            // do something with the current element
+	        	String path = getPath(node);
+	        	if(!uniquePaths.containsKey(path)) {
+	        		uniquePaths.put(path, new ArrayList<>());
+	        		System.out.print(path);
+	        		NamedNodeMap attributes = node.getAttributes();
+	        		for (int a=0;a<attributes.getLength();a++) {
+	        			System.out.print(" "+attributes.item(a).getNodeName());
+	        		}
+	        		System.out.println("");
+	        	}
+	        }
+	    }
+*/	}
+
+	private static XmlNodeTag unflat(Collection<XmlNodeTag> tags) {
+		Map<String,XmlNodeTag> tmap = new TreeMap<>();
+		XmlNodeTag tree = null;
+		for(XmlNodeTag tag : tags) {
+			XmlNodeTag xnt = getTree(tag).getRoot();
+//			xnt.compact();
+			if(tree==null) {
+				tree = xnt;
+			} else {
+				tree.merge(xnt);
+			}
+		}
+//		System.out.println(tree.treeString());
+//		tree.compact();
+		System.out.println(tree.treeString());
+//		tree = compact(tree);
+//		System.out.println(compact(tree).treeString());
+		return tree;
+	}
+	
+	private static XmlNodeTag getTree(XmlNodeTag leaf) {
+		XmlNodeTag child = new XmlNodeTag();
+		child.setBody(leaf.getBody());
+		child.setTagName(leaf.getTagName());
+		child.setTagAttributes(leaf.getTagAttributes());
+		child.setTagPath(leaf.getTagPath());
+		child.setBody(leaf.getBody());
+		if(leaf.getParent()!=null) {
+			XmlNodeTag parent = getTree(leaf.getParent());
+			parent.addChild(child);
+			child.setParent(parent);
+		}
+		return child;
+	}
+	
+	private static XmlNodeTag compact(XmlNodeTag tree) {
+		Map<String,XmlNodeTag> treeNode = new HashMap<>();
+		for(XmlNodeTag child:tree.getChildren()) {
+			treeNode.put(child.getTagPath(), child);
+		}
+		tree.getChildren().clear();
+		tree.getChildren().addAll(treeNode.values());
+		for(XmlNodeTag child:tree.getChildren()) {
+			compact(child);
+		}
+		return tree;
+	}
+	
+	public static XmlNodeTag toTree(Collection<XmlNodeTag> elements)
+	{
+		XmlNodeTag message = new XmlNodeTag();
+	    Stack<XmlNodeTag> parents = new Stack<XmlNodeTag>();
+	    parents.push(message);
+	    for (XmlNodeTag element : elements)
+	    {
+	        while (!parents.empty() && !element.getParent().getTagName().equals(parents.peek().getTagName()))
+	        {
+	            parents.pop();
+	        }
+	        parents.push(element);
+	    }
+	    return message;
+	}
+
+	private static XmlNodeTag getXNode(Node node) {
+	    Node parent = node.getParentNode();
+//	    System.out.println(node.getNodeName()+"="+node.getNodeValue()+"="+node.getNodeType());
+	    
+	    if (parent.getParentNode() == null) {
+	    	XmlNodeTag xnt = new XmlNodeTag();
+	    	if(node.getNodeType()==node.TEXT_NODE) {
+	    		xnt.setBody("");
+	    	}
+	    	xnt.setTagName(node.getNodeName());
+	    	xnt.setTagPath(node.getNodeName());
+	    	xnt.setTagAttributes(getAttributes(node));
+	        return xnt;
+	    }
+	    XmlNodeTag xnt = new XmlNodeTag();
+	    if(node.getNodeType()==node.TEXT_NODE) {
+	    	xnt.setBody("");
+	    }
+    	xnt.setTagPath(node.getNodeName());
+    	xnt.setTagAttributes(getAttributes(node));
+    	xnt.setTagName(node.getNodeName());
+    	XmlNodeTag pxpath = getXNode(parent);
+    	xnt.setParent(pxpath);
+    	pxpath.addChild(xnt);
+    	xnt.setTagPath(pxpath.getTagPath()+"/"+node.getNodeName());
+	    return xnt;
+	}
+
+	private static String getPath(Node node) {
+		if(node.getParentNode().getParentNode()==null) {
+			return node.getNodeName();
+		}
+		return getPath(node.getParentNode())+"/"+node.getNodeName();
+	}
+	
+	private static Map<String,XmlNodeTag> getFlatUniquePaths(XmlNodeTag tag) {
+		Map<String,XmlNodeTag> tagPaths = new HashMap<>();
+		tagPaths.put(tag.getPath(),tag);
+		for(XmlNodeTag child:tag.getChildren()) {
+			tagPaths.putAll(getFlatUniquePaths(child));
+		}
+		return tagPaths;
+	}
+
+	private static XmlNodeTag getChildNodes(Node node) {
+		XmlNodeTag xnt = new XmlNodeTag();
+		xnt.setTagName(node.getNodeName());
+		List<String> tagAttributes = getAttributes(node);
+		xnt.setTagAttributes(tagAttributes);
+		if (node.hasChildNodes()) {
+			NodeList nodeList = node.getChildNodes();
+			for (int i = 0; i < nodeList.getLength(); i++) {
+				if(nodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
+					XmlNodeTag child = getChildNodes(nodeList.item(i));
+					xnt.addChild(child);
+				}
+			}
+		}
+		return xnt;
+	}
+	
+	private static List<String> getAttributes(Node node) {
+		List<String> alist = new ArrayList<>();
+		NamedNodeMap attributes = node.getAttributes();
+		if(attributes!=null) {
+			for(int i=0;i<attributes.getLength();i++) {
+				alist.add(attributes.item(i).getNodeName());
+			}
+		}
+		return alist;
+	}
+
+}

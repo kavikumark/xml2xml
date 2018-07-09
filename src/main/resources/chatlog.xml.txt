@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:schema targetNamespace="" elementFormDefault="qualified" xmlns:xsl="http://www.w3.org/2001/XMLSchema">
+    <xsl:element name="Log">
+        <xsl:complexType mixed="true">
+            <xsl:sequence>
+                <xsl:element name="Message" maxOccurs="unbounded">
+                    <xsl:complexType mixed="true">
+                        <xsl:sequence>
+                            <xsl:element name="From" minOccurs="0">
+                                <xsl:complexType mixed="true">
+                                    <xsl:sequence>
+                                        <xsl:element name="User" minOccurs="0">
+                                            <xsl:complexType>
+                                                <xsl:simpleContent>
+                                                    <xsl:extension base="xsl:string">
+                                                        <xsl:attribute name="LogonName" type="xsl:normalizedString" use="required"/>
+                                                        <xsl:attribute name="FriendlyName" type="xsl:normalizedString" use="required"/>
+                                                    </xsl:extension>
+                                                </xsl:simpleContent>
+                                            </xsl:complexType>
+                                        </xsl:element>
+                                    </xsl:sequence>
+                                </xsl:complexType>
+                            </xsl:element>
+                            <xsl:element name="To" minOccurs="0">
+                                <xsl:complexType mixed="true">
+                                    <xsl:sequence>
+                                        <xsl:element name="User" minOccurs="0">
+                                            <xsl:complexType>
+                                                <xsl:simpleContent>
+                                                    <xsl:extension base="xsl:string">
+                                                        <xsl:attribute name="LogonName" type="xsl:normalizedString" use="required"/>
+                                                        <xsl:attribute name="FriendlyName" type="xsl:normalizedString" use="required"/>
+                                                    </xsl:extension>
+                                                </xsl:simpleContent>
+                                            </xsl:complexType>
+                                        </xsl:element>
+                                    </xsl:sequence>
+                                </xsl:complexType>
+                            </xsl:element>
+                            <xsl:element name="Text" minOccurs="0">
+                                <xsl:complexType>
+                                    <xsl:simpleContent>
+                                        <xsl:extension base="xsl:normalizedString">
+                                            <xsl:attribute name="Style" type="xsl:string" use="required"/>
+                                        </xsl:extension>
+                                    </xsl:simpleContent>
+                                </xsl:complexType>
+                            </xsl:element>
+                        </xsl:sequence>
+                        <xsl:attribute name="Date" type="xsl:normalizedString" use="required"/>
+                        <xsl:attribute name="Time" type="xsl:string" use="required"/>
+                        <xsl:attribute name="DateTime" type="xsl:normalizedString" use="required"/>
+                    </xsl:complexType>
+                </xsl:element>
+            </xsl:sequence>
+            <xsl:attribute name="LogonName" type="xsl:normalizedString" use="required"/>
+            <xsl:attribute name="FirstSessionID" type="xsl:int" use="required"/>
+            <xsl:attribute name="LastSessionID" type="xsl:int" use="required"/>
+        </xsl:complexType>
+    </xsl:element>
+</xsl:schema>

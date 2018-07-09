@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type='text/xsl' href='MessageLog.xsl'?>
+<Log LogonName="user1@hotmail.com" FirstSessionID="1" LastSessionID="120">
+  <Message Date="22/06/2003" Time="11:37:29 PM" DateTime="2003-06-22T12:37:29.097Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">hello</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:37:42 PM" DateTime="2003-06-22T12:37:42.937Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">hey</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:38:40 PM" DateTime="2003-06-22T12:38:40.680Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">how r u</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:39:08 PM" DateTime="2003-06-22T12:39:08.260Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">im alrite, u?</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:39:15 PM" DateTime="2003-06-22T12:39:15.991Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">very busy</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:39:49 PM" DateTime="2003-06-22T12:39:49.008Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">hows school goin</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:39:59 PM" DateTime="2003-06-22T12:39:59.724Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">exam is coming !!</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:40:19 PM" DateTime="2003-06-22T12:40:19.442Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">hahaha good luck</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:41:09 PM" DateTime="2003-06-22T12:41:09.404Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">whens your exam?</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:41:15 PM" DateTime="2003-06-22T12:41:15.553Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">finish already =)</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:41:25 PM" DateTime="2003-06-22T12:41:25.177Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">waa, so jealous</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:41:49 PM" DateTime="2003-06-22T12:41:49.482Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">goin back to spore?</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:45:34 PM" DateTime="2003-06-22T12:45:34.956Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">definitely</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:46:17 PM" DateTime="2003-06-22T12:46:17.998Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">when?</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:54:47 PM" DateTime="2003-06-22T12:54:47.110Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">2 weeks from now</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:55:46 PM" DateTime="2003-06-22T12:55:46.145Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">im staying here</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:55:58 PM" DateTime="2003-06-22T12:55:58.963Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">why?</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:56:55 PM" DateTime="2003-06-22T12:56:55.374Z">
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To>
+    <Text Style="font-family:Arial; color:#0000ff; ">my parents are coming</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:56:55 PM" DateTime="2003-06-22T12:56:55.444Z">
+    <From><User LogonName="user2@hotmail.com" FriendlyName="User2"/></From>
+    <To><User LogonName="user1@hotmail.com" FriendlyName="User1"/></To>
+    <Text Style="font-family:Fixedsys; color:#0000ff; ">ic, have to go, cya</Text>
+  </Message>
+  <Message Date="22/06/2003" Time="11:57:09 PM" DateTime="2003-06-22T12:57:09.885Z"> 
+    <From><User LogonName="user1@hotmail.com" FriendlyName="User1"/></From>
+    <To><User LogonName="user2@hotmail.com" FriendlyName="User2"/></To> 
+    <Text Style="font-family:Arial; color:#0000ff; ">cya</Text>
+  </Message>
+</Log>
+

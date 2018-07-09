@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ws:Worker_Sync xmlns:ws="urn:com.workday/workersync" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ws:Header>
+        <ws:Version>25.0</ws:Version>
+        <ws:Prior_Entry_Time>2018-01-15T00:00:00.000-08:00</ws:Prior_Entry_Time>
+        <ws:Current_Entry_Time>2018-01-22T00:00:00.000-08:00</ws:Current_Entry_Time>
+        <ws:Prior_Effective_Time>2018-01-15T00:00:00.000-08:00</ws:Prior_Effective_Time>
+        <ws:Current_Effective_Time>2018-01-22T00:00:00.000-08:00</ws:Current_Effective_Time>
+        <ws:Full_File>false</ws:Full_File>
+        <ws:Document_Retention_Policy>30</ws:Document_Retention_Policy>
+        <ws:Worker_Count>2</ws:Worker_Count>
+    </ws:Header>
+    <ws:Worker>
+        <ws:Summary>
+            <ws:Employee_ID>123456</ws:Employee_ID>
+            <ws:Name>Sania Mirza</ws:Name>
+        </ws:Summary>
+        <ws:Eligibility>true</ws:Eligibility>
+        <ws:Personal>
+            <ws:Name_Data>
+                <ws:First_Name>Sania</ws:First_Name>
+                <ws:Last_Name>Mirza</ws:Last_Name>
+            </ws:Name_Data>
+            <ws:Gender>M</ws:Gender>
+            <ws:Birth_Date>1987-06-26</ws:Birth_Date>
+            <ws:Address_Data>
+                <ws:Address_Type>HOME</ws:Address_Type>
+                <ws:Is_Primary>true</ws:Is_Primary>
+                <ws:Address_Line_Data ws:Label="Address Line 1" ws:Type="ADDRESS_LINE_1">1786 30
+                    Eagle Ave</ws:Address_Line_Data>
+                <ws:Municipality>Blue Deer</ws:Municipality>
+                <ws:Region>AB</ws:Region>
+                <ws:Postal_Code>T4P 0M8</ws:Postal_Code>
+                <ws:Country>CAN</ws:Country>
+            </ws:Address_Data>
+            <ws:Address_Data>
+                <ws:Address_Type>WORK</ws:Address_Type>
+                <ws:Is_Primary>true</ws:Is_Primary>
+                <ws:Address_Line_Data ws:Label="Address Line 1" ws:Type="ADDRESS_LINE_1">6788 48
+                    Avenue, Unit 15, Wine Plaza</ws:Address_Line_Data>
+                <ws:Municipality>Green Deer</ws:Municipality>
+                <ws:Region>AB</ws:Region>
+                <ws:Postal_Code>T4N 4C9</ws:Postal_Code>
+                <ws:Country>CAN</ws:Country>
+            </ws:Address_Data>
+        </ws:Personal>
+        <ws:Status>
+            <ws:Employee_Status>Terminated</ws:Employee_Status>
+            <ws:Hire_Date>2015-10-05</ws:Hire_Date>
+            <ws:Original_Hire_Date>2015-10-05</ws:Original_Hire_Date>
+            <ws:Continuous_Service_Date ws:PriorValue="2015-10-05"
+                >2018-01-29</ws:Continuous_Service_Date>
+            <ws:Retired>false</ws:Retired>
+            <ws:Terminated>true</ws:Terminated>
+            <ws:Termination_Date>2017-05-22</ws:Termination_Date>
+            <ws:Primary_Termination_Reason>Terminate_Employee_Involuntary_Workforce_Reduction</ws:Primary_Termination_Reason>
+            <ws:Primary_Termination_Category>Terminate_Employee_Involuntary</ws:Primary_Termination_Category>
+            <ws:Home_Country>CAN</ws:Home_Country>
+        </ws:Status>
+        <ws:Position>
+            <ws:Operation>NONE</ws:Operation>
+            <ws:Effective_Date>2017-01-01</ws:Effective_Date>
+            <ws:Worker_Type>Permanent</ws:Worker_Type>
+            <ws:Position_Time_Type>F</ws:Position_Time_Type>
+            <ws:Job_Exempt>false</ws:Job_Exempt>
+            <ws:Scheduled_Weekly_Hours>40</ws:Scheduled_Weekly_Hours>
+            <ws:Full_Time_Equivalent_Percentage>100</ws:Full_Time_Equivalent_Percentage>
+        </ws:Position>
+        <ws:Compensation>
+            <ws:Operation>NONE</ws:Operation>
+            <ws:Effective_Date>2017-01-01</ws:Effective_Date>
+            <ws:Total_Annual_Base_Pay>36628.8</ws:Total_Annual_Base_Pay>
+            <ws:Total_Base_Pay>17.61</ws:Total_Base_Pay>
+            <ws:Base_Pay_Currency>CAD</ws:Base_Pay_Currency>
+            <ws:Base_Pay_Frequency>Hourly</ws:Base_Pay_Frequency>
+        </ws:Compensation>
+        <ws:Additional_Information>
+            <ws:Language>English (United States)</ws:Language>
+            <ws:Ongoing_Long_Term_Disability_Count>0</ws:Ongoing_Long_Term_Disability_Count>
+            <ws:Cost_Center_1>TRM</ws:Cost_Center_1>
+            <ws:Base_Pay_Frequency_As_of_Termination_Date>Hourly</ws:Base_Pay_Frequency_As_of_Termination_Date>
+        </ws:Additional_Information>
+    </ws:Worker>
+    <ws:Worker>
+        <ws:Summary>
+            <ws:Employee_ID>100859</ws:Employee_ID>
+            <ws:Name>Nancy Jeo</ws:Name>
+        </ws:Summary>
+        <ws:Eligibility>true</ws:Eligibility>
+        <ws:Personal>
+            <ws:Name_Data>
+                <ws:First_Name>Nancy</ws:First_Name>
+                <ws:Last_Name>Jeo</ws:Last_Name>
+            </ws:Name_Data>
+            <ws:Gender>F</ws:Gender>
+            <ws:Birth_Date>1986-05-14</ws:Birth_Date>
+            <ws:Address_Data>
+                <ws:Address_Type>HOME</ws:Address_Type>
+                <ws:Is_Primary>true</ws:Is_Primary>
+                <ws:Address_Line_Data ws:PriorValue="8977 Spice Road"
+                    ws:Label="Address Line 1" ws:Type="ADDRESS_LINE_1">303-13 LOGSTREAM
+                    BLVD</ws:Address_Line_Data>
+                <ws:Municipality>Logbridge</ws:Municipality>
+                <ws:Region>ON</ws:Region>
+                <ws:Postal_Code ws:PriorValue="L4H 1C3">L4L 8C3</ws:Postal_Code>
+                <ws:Country>CAN</ws:Country>
+            </ws:Address_Data>
+            <ws:Address_Data>
+                <ws:Address_Type ws:PriorValue="">WORK</ws:Address_Type>
+                <ws:Is_Primary ws:PriorValue="">true</ws:Is_Primary>
+                <ws:Address_Line_Data ws:PriorValue="" ws:Label="Address Line 1"
+                    ws:Type="ADDRESS_LINE_1">1318 Clinch Avenue West, Suite
+                    121</ws:Address_Line_Data>
+                <ws:Municipality ws:PriorValue="">North York</ws:Municipality>
+                <ws:Region ws:PriorValue="">ON</ws:Region>
+                <ws:Postal_Code ws:PriorValue="">M3J 2G6</ws:Postal_Code>
+                <ws:Country ws:PriorValue="">CAN</ws:Country>
+            </ws:Address_Data>
+            <ws:Address_Data>
+                <ws:Address_Type ws:PriorValue="WORK" xsi:nil="true"/>
+                <ws:Is_Primary ws:PriorValue="true" xsi:nil="true"/>
+                <ws:Address_Line_Data ws:PriorValue="10520 Yonge Street" ws:Label="Address Line 1"
+                    ws:Type="ADDRESS_LINE_1" xsi:nil="true"/>
+                <ws:Municipality ws:PriorValue="Richmond Hill" xsi:nil="true"/>
+                <ws:Region ws:PriorValue="ON" xsi:nil="true"/>
+                <ws:Postal_Code ws:PriorValue="L4C 3C7" xsi:nil="true"/>
+                <ws:Country ws:PriorValue="CAN" xsi:nil="true"/>
+            </ws:Address_Data>
+        </ws:Personal>
+        <ws:Status>
+            <ws:Staffing_Event ws:PriorValue="">HIR</ws:Staffing_Event>
+            <ws:Staffing_Event_Date ws:PriorValue="">2018-01-15</ws:Staffing_Event_Date>
+            <ws:Employee_Status ws:PriorValue="Terminated">Active</ws:Employee_Status>
+            <ws:Hire_Date ws:PriorValue="2006-08-21">2018-01-15</ws:Hire_Date>
+            <ws:Original_Hire_Date>2006-08-21</ws:Original_Hire_Date>
+            <ws:Continuous_Service_Date ws:PriorValue="2006-08-21"
+                >2018-01-15</ws:Continuous_Service_Date>
+            <ws:Retired>false</ws:Retired>
+            <ws:Terminated ws:PriorValue="true">false</ws:Terminated>
+            <ws:Termination_Date ws:PriorValue="2017-05-24" xsi:nil="true"/>
+            <ws:Primary_Termination_Reason ws:PriorValue="Terminate_Employee_Voluntary_Unknown"
+                xsi:nil="true"/>
+            <ws:Primary_Termination_Category ws:PriorValue="Terminate_Employee_Voluntary"
+                xsi:nil="true"/>
+            <ws:Home_Country>CAN</ws:Home_Country>
+        </ws:Status>
+        <ws:Position>
+            <ws:Operation>ADD</ws:Operation>
+            <ws:Effective_Date ws:PriorValue="">2018-01-15</ws:Effective_Date>
+            <ws:Worker_Type ws:PriorValue="">Permanent</ws:Worker_Type>
+            <ws:Position_Time_Type ws:PriorValue="">F</ws:Position_Time_Type>
+            <ws:Job_Exempt ws:PriorValue="">false</ws:Job_Exempt>
+            <ws:Scheduled_Weekly_Hours ws:PriorValue="">40</ws:Scheduled_Weekly_Hours>
+            <ws:Full_Time_Equivalent_Percentage ws:PriorValue=""
+                >100</ws:Full_Time_Equivalent_Percentage>
+        </ws:Position>
+        <ws:Position>
+            <ws:Operation>REMOVE</ws:Operation>
+            <ws:Effective_Date ws:PriorValue="2017-01-01" xsi:nil="true"/>
+            <ws:Worker_Type ws:PriorValue="Permanent" xsi:nil="true"/>
+            <ws:Position_Time_Type ws:PriorValue="F" xsi:nil="true"/>
+            <ws:Job_Exempt ws:PriorValue="false" xsi:nil="true"/>
+            <ws:Scheduled_Weekly_Hours ws:PriorValue="40" xsi:nil="true"/>
+            <ws:Full_Time_Equivalent_Percentage ws:PriorValue="100" xsi:nil="true"/>
+        </ws:Position>
+        <ws:Compensation>
+            <ws:Operation>ADD</ws:Operation>
+            <ws:Effective_Date ws:PriorValue="">2018-01-15</ws:Effective_Date>
+            <ws:Total_Annual_Base_Pay ws:PriorValue="">71600</ws:Total_Annual_Base_Pay>
+            <ws:Total_Base_Pay ws:PriorValue="">2753.85</ws:Total_Base_Pay>
+            <ws:Base_Pay_Currency ws:PriorValue="">CAD</ws:Base_Pay_Currency>
+            <ws:Base_Pay_Frequency ws:PriorValue="">Biweekly</ws:Base_Pay_Frequency>
+        </ws:Compensation>
+        <ws:Compensation>
+            <ws:Operation>REMOVE</ws:Operation>
+            <ws:Effective_Date ws:PriorValue="2011-03-01" xsi:nil="true"/>
+            <ws:Total_Annual_Base_Pay ws:PriorValue="71619.38" xsi:nil="true"/>
+            <ws:Total_Base_Pay ws:PriorValue="71619.38" xsi:nil="true"/>
+            <ws:Base_Pay_Currency ws:PriorValue="CAD" xsi:nil="true"/>
+        </ws:Compensation>
+        <ws:Additional_Information>
+            <ws:Language>English (United States)</ws:Language>
+            <ws:Ongoing_Long_Term_Disability_Count>0</ws:Ongoing_Long_Term_Disability_Count>
+            <ws:CF_Worker_Legal_Name_Eff_Date ws:PriorValue=""
+                >2018-01-15</ws:CF_Worker_Legal_Name_Eff_Date>
+            <ws:Cost_Center_1 ws:PriorValue="TRM">ACT</ws:Cost_Center_1>
+            <ws:Base_Pay_Frequency_As_of_Termination_Date>Annual</ws:Base_Pay_Frequency_As_of_Termination_Date>
+        </ws:Additional_Information>
+    </ws:Worker>
+</ws:Worker_Sync>

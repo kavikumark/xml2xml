@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FILE xmlns:etv="urn:com.workday/etv" xmlns:xtt="urn:com.workday/xtt" xtt:separator="&#xD;&#xA;"
+    xtt:align="left" xtt:severity="warning" xtt:paddingCharacter=" ">
+    <HEADER xtt:startTag="HDR">
+        <CLIENT_NAME xtt:fixedLength="30">Fairstone</CLIENT_NAME>
+        <FILE_CREATION_DATE xtt:fixedLength="8">20180417</FILE_CREATION_DATE>
+        <FILE_VERSION_NUMBER xtt:fixedLength="5">001.0</FILE_VERSION_NUMBER>
+        <FILE_LAYOUT_NAME_NAME xtt:fixedLength="20">AllBenefits</FILE_LAYOUT_NAME_NAME>
+        <MEMBER_ID_TYPE xtt:fixedLength="1">2</MEMBER_ID_TYPE>
+        <FILLER xtt:fixedLength="6"></FILLER>
+        <CHANGES_ONLY xtt:fixedLength="1">2</CHANGES_ONLY>
+        <FILLER xtt:fixedLength="15"></FILLER>
+        <FILLER xtt:fixedLength="1"></FILLER>
+        <FILLER xtt:fixedLength="2"></FILLER>
+    </HEADER>
+    <MEMBER_RECORD>
+        <RECORD_TYPE xtt:fixedLength="3">M</RECORD_TYPE>
+        <CLIENT_NUMBER xtt:fixedLength="7">0107924</CLIENT_NUMBER>
+        <ACTION xtt:fixedLength="3">TRM</ACTION>
+        <EFF_DATE xtt:fixedLength="8">20170522</EFF_DATE>
+        <CERTIFICATE_NBR xtt:fixedLength="9"></CERTIFICATE_NBR>
+        <PAYROLL_ID xtt:fixedLength="10">101377</PAYROLL_ID>
+        <FILLER xtt:fixedLength="9"></FILLER>
+        <FIRST_NAME xtt:fixedLength="30">Farid</FIRST_NAME>
+        <FILLER xtt:fixedLength="6"></FILLER>
+        <LAST_NAME xtt:fixedLength="30">Mirza</LAST_NAME>
+        <DOB xtt:fixedLength="8">19850220</DOB>
+        <GENDER xtt:fixedLength="1">1</GENDER>
+        <LANGUAGE xtt:fixedLength="1">1</LANGUAGE>
+        <SMOKE_STATUS xtt:fixedLength="1"></SMOKE_STATUS>
+        <PLAN xtt:fixedLength="3">AA</PLAN>
+        <LOCATION xtt:fixedLength="3">010</LOCATION>
+        <CLASS xtt:fixedLength="3">010</CLASS>
+        <COST_CENTER1 xtt:fixedLength="10">TRM</COST_CENTER1>
+        <COST_CENTER2 xtt:fixedLength="10"></COST_CENTER2>
+        <COST_CENTER3 xtt:fixedLength="10"></COST_CENTER3>
+        <DOE xtt:fixedLength="8">20180129</DOE>
+        <RESIDENCE_PROVINCE xtt:fixedLength="2">AB</RESIDENCE_PROVINCE>
+        <WORK_PROVINCE xtt:fixedLength="2">AB</WORK_PROVINCE>
+        <FILLER xtt:fixedLength="2"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <RETIREMENT_DATE xtt:fixedLength="8"></RETIREMENT_DATE>
+        <OCCUPATION xtt:fixedLength="1"></OCCUPATION>
+        <DATE_OF_DEATH xtt:fixedLength="8"></DATE_OF_DEATH>
+        <SUPERVISOR_STATUS xtt:fixedLength="1"></SUPERVISOR_STATUS>
+        <TAX_EXEMPT xtt:fixedLength="1"></TAX_EXEMPT>
+        <FILLER xtt:fixedLength="1"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="1"></FILLER>
+    </MEMBER_RECORD>
+    <SAL_RECORD>
+        <RECORD_TYPE xtt:fixedLength="3">S</RECORD_TYPE>
+        <CLIENT_NUMBER xtt:fixedLength="7">0107924</CLIENT_NUMBER>
+        <ACTION xtt:fixedLength="3"></ACTION>
+        <EFF_DATE xtt:fixedLength="8">20180417</EFF_DATE>
+        <CERTIFICATE_NBR xtt:fixedLength="9"></CERTIFICATE_NBR>
+        <PAYROLL_ID xtt:fixedLength="10">101377</PAYROLL_ID>
+        <FILLER xtt:fixedLength="9"></FILLER>
+        <SAL_DESC_CODE xtt:fixedLength="2">01</SAL_DESC_CODE>
+        <SAL_BASIS xtt:fixedLength="1">1</SAL_BASIS>
+        <SAL_AMOUNT xtt:fixedLength="11" xtt:align="right" xtt:paddingCharacter="0">NaN</SAL_AMOUNT>
+        <HOURS_WEEK xtt:fixedLength="8" xtt:align="right" xtt:paddingCharacter="0"
+            >40.00</HOURS_WEEK>
+    </SAL_RECORD>
+    <ADDR_RECORD>
+        <RECORD_TYPE xtt:fixedLength="3">A</RECORD_TYPE>
+        <CLIENT_NUMBER xtt:fixedLength="7">0107924</CLIENT_NUMBER>
+        <FILLER xtt:fixedLength="3"></FILLER>
+        <EFF_DATE xtt:fixedLength="8">20180417</EFF_DATE>
+        <CERTIFICATE_NBR xtt:fixedLength="9"></CERTIFICATE_NBR>
+        <PAYROLL_ID xtt:fixedLength="10">101377</PAYROLL_ID>
+        <FILLER xtt:fixedLength="9"></FILLER>
+        <ADDR_TYPE xtt:fixedLength="1">1</ADDR_TYPE>
+        <STREET xtt:fixedLength="30">1705 30 Carleton Ave</STREET>
+        <SUITE xtt:fixedLength="30"></SUITE>
+        <CITY xtt:fixedLength="30">Red Deer</CITY>
+        <PROVINCE xtt:fixedLength="2">AB</PROVINCE>
+        <COUNRTY xtt:fixedLength="1">1</COUNRTY>
+        <POSTAL xtt:fixedLength="15">T4P 0M8</POSTAL>
+        <PHONE xtt:fixedLength="30"></PHONE>
+        <WORK_EMAIL xtt:fixedLength="128"></WORK_EMAIL>
+    </ADDR_RECORD>
+    <MEMBER_RECORD>
+        <RECORD_TYPE xtt:fixedLength="3">M</RECORD_TYPE>
+        <CLIENT_NUMBER xtt:fixedLength="7">0107924</CLIENT_NUMBER>
+        <ACTION xtt:fixedLength="3"></ACTION>
+        <EFF_DATE xtt:fixedLength="8">20180115</EFF_DATE>
+        <CERTIFICATE_NBR xtt:fixedLength="9"></CERTIFICATE_NBR>
+        <PAYROLL_ID xtt:fixedLength="10">100859</PAYROLL_ID>
+        <FILLER xtt:fixedLength="9"></FILLER>
+        <FIRST_NAME xtt:fixedLength="30">Nunziata</FIRST_NAME>
+        <FILLER xtt:fixedLength="6"></FILLER>
+        <LAST_NAME xtt:fixedLength="30">Romeo</LAST_NAME>
+        <DOB xtt:fixedLength="8">19760514</DOB>
+        <GENDER xtt:fixedLength="1">2</GENDER>
+        <LANGUAGE xtt:fixedLength="1">1</LANGUAGE>
+        <SMOKE_STATUS xtt:fixedLength="1"></SMOKE_STATUS>
+        <PLAN xtt:fixedLength="3">AA</PLAN>
+        <LOCATION xtt:fixedLength="3">010</LOCATION>
+        <CLASS xtt:fixedLength="3">010</CLASS>
+        <COST_CENTER1 xtt:fixedLength="10">ACT</COST_CENTER1>
+        <COST_CENTER2 xtt:fixedLength="10"></COST_CENTER2>
+        <COST_CENTER3 xtt:fixedLength="10"></COST_CENTER3>
+        <DOE xtt:fixedLength="8">20180115</DOE>
+        <RESIDENCE_PROVINCE xtt:fixedLength="2">ON</RESIDENCE_PROVINCE>
+        <WORK_PROVINCE xtt:fixedLength="2">ON</WORK_PROVINCE>
+        <FILLER xtt:fixedLength="2"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <RETIREMENT_DATE xtt:fixedLength="8"></RETIREMENT_DATE>
+        <OCCUPATION xtt:fixedLength="1"></OCCUPATION>
+        <DATE_OF_DEATH xtt:fixedLength="8"></DATE_OF_DEATH>
+        <SUPERVISOR_STATUS xtt:fixedLength="1"></SUPERVISOR_STATUS>
+        <TAX_EXEMPT xtt:fixedLength="1"></TAX_EXEMPT>
+        <FILLER xtt:fixedLength="1"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="8"></FILLER>
+        <FILLER xtt:fixedLength="1"></FILLER>
+    </MEMBER_RECORD>
+    <SAL_RECORD>
+        <RECORD_TYPE xtt:fixedLength="3">S</RECORD_TYPE>
+        <CLIENT_NUMBER xtt:fixedLength="7">0107924</CLIENT_NUMBER>
+        <ACTION xtt:fixedLength="3"></ACTION>
+        <EFF_DATE xtt:fixedLength="8">20180115</EFF_DATE>
+        <CERTIFICATE_NBR xtt:fixedLength="9"></CERTIFICATE_NBR>
+        <PAYROLL_ID xtt:fixedLength="10">100859</PAYROLL_ID>
+        <FILLER xtt:fixedLength="9"></FILLER>
+        <SAL_DESC_CODE xtt:fixedLength="2">01</SAL_DESC_CODE>
+        <SAL_BASIS xtt:fixedLength="1">1</SAL_BASIS>
+        <SAL_AMOUNT xtt:fixedLength="11" xtt:align="right" xtt:paddingCharacter="0">NaN</SAL_AMOUNT>
+        <HOURS_WEEK xtt:fixedLength="8" xtt:align="right" xtt:paddingCharacter="0"
+            >40.00</HOURS_WEEK>
+    </SAL_RECORD>
+    <ADDR_RECORD>
+        <RECORD_TYPE xtt:fixedLength="3">A</RECORD_TYPE>
+        <CLIENT_NUMBER xtt:fixedLength="7">0107924</CLIENT_NUMBER>
+        <FILLER xtt:fixedLength="3"></FILLER>
+        <EFF_DATE xtt:fixedLength="8">20180115</EFF_DATE>
+        <CERTIFICATE_NBR xtt:fixedLength="9"></CERTIFICATE_NBR>
+        <PAYROLL_ID xtt:fixedLength="10">100859</PAYROLL_ID>
+        <FILLER xtt:fixedLength="9"></FILLER>
+        <ADDR_TYPE xtt:fixedLength="1">1</ADDR_TYPE>
+        <STREET xtt:fixedLength="30">303-12 WOODSTREAM BLVD</STREET>
+        <SUITE xtt:fixedLength="30"></SUITE>
+        <CITY xtt:fixedLength="30">Woodbridge</CITY>
+        <PROVINCE xtt:fixedLength="2">ON</PROVINCE>
+        <COUNRTY xtt:fixedLength="1">1</COUNRTY>
+        <POSTAL xtt:fixedLength="15">L4L 8C3</POSTAL>
+        <PHONE xtt:fixedLength="30"></PHONE>
+        <WORK_EMAIL xtt:fixedLength="128"></WORK_EMAIL>
+    </ADDR_RECORD>
+    <TRAILER xtt:startTag="TRL">
+        <RECORD_COUNT xtt:fixedLength="10" xtt:align="right" xtt:paddingCharacter="0"
+            >6</RECORD_COUNT>
+    </TRAILER>
+</FILE>
